@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Gemini Summarizer</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: 'Roboto', 'Arial', sans-serif;
+      margin: 0;
+      background: #ffffff;
+      color: #202124;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-size: 18px;
+      margin: 0 0 8px 0;
+      color: #1a73e8;
+    }
+
+    .header p {
+      font-size: 14px;
+      color: #5f6368;
+      margin: 0;
+    }
+
+    .content {
+      text-align: center;
+    }
+
+    .instruction {
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+      color: #202124;
+    }
+
+    .feature-list {
+      text-align: left;
+      margin: 16px 0;
+    }
+
+    .feature-list li {
+      font-size: 13px;
+      margin: 8px 0;
+      color: #5f6368;
+    }
+
+    .status {
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      margin: 16px 0;
+    }
+
+    .status.active {
+      background: #e8f5e8;
+      color: #137333;
+      border: 1px solid #c6f6d5;
+    }
+
+    .status.inactive {
+      background: #fef7e0;
+      color: #b06000;
+      border: 1px solid #fdd663;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    .footer a {
+      color: #1a73e8;
+      text-decoration: none;
+      font-size: 12px;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <h1>YouTube Gemini Summarizer</h1>
+    <p>動画要約を簡単に</p>
+  </div>
+
+  <div class="content">
+    <div id="status" class="status">
+      <span class="status-icon">●</span>
+      <span id="status-text">チェック中...</span>
+    </div>
+
+    <div class="instruction">
+      YouTubeの動画ページを開くと、「要約」ボタンが自動的に追加されます。<br>
+      ボタンを押すと右側にGeminiが立ち上がり、自動で要約を開始します。
+    </div>
+
+    <div class="feature-list">
+      <strong>特徴:</strong>
+      <ul>
+        <li>✨ コピペ不要！自動入力</li>
+        <li>🆓 APIキー不要！無料で使えます</li>
+        <li>🤖 AIと会話して詳細を聞けます</li>
+        <li>📱 邪魔にならない小窓表示</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer">
+    <a href="https://gemini.google.com" target="_blank">Geminiについて</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
