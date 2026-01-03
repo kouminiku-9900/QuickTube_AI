@@ -1,0 +1,43 @@
+/* YouTube Gemini Summarizer Styles */
+
+/* 要約ボタンのスタイル調整 */
+#gemini-summary-button {
+  position: relative;
+}
+
+#gemini-summary-button:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+#gemini-summary-button .yt-spec-button-shape-next__icon svg {
+  /* 軸を中心に設定 (SVGの図形中心に合わせて調整: Y=9px付近) */
+  transform-origin: 50% 38%;
+
+  /* ベースカラー (Gemini系の明るい青) */
+  color: #4aa3ff;
+
+  /* うるさくないゆっくりとしたレインボー呼吸 */
+  animation: rainbow-breath 8s linear infinite;
+
+  /* ほんのり発光 */
+  filter: drop-shadow(0 0 2px rgba(74, 163, 255, 0.5));
+}
+
+@keyframes rainbow-breath {
+  0% {
+    transform: scale(1);
+    filter: hue-rotate(0deg) drop-shadow(0 0 2px rgba(74, 163, 255, 0.5));
+  }
+
+  50% {
+    transform: scale(1.1);
+    /* 色相を半周回す */
+    filter: hue-rotate(180deg) drop-shadow(0 0 6px rgba(74, 163, 255, 0.8));
+  }
+
+  100% {
+    transform: scale(1);
+    /* 一周回して戻る */
+    filter: hue-rotate(360deg) drop-shadow(0 0 2px rgba(74, 163, 255, 0.5));
+  }
+}
